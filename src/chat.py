@@ -38,7 +38,7 @@ def main():
             
         try:
             prompt_text = search_prompt(question)
-            response = model.invoke(prompt_text)
+            response = model.invoke([HumanMessage(content=prompt_text)])
             
             print(f"Chatbot: {response.content}")
             
